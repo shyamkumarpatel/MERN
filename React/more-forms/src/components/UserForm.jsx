@@ -1,4 +1,5 @@
 import React, { useState } from  'react';
+import Display from './Display';
     
     
 const UserForm = (props) => {
@@ -64,16 +65,7 @@ const UserForm = (props) => {
                     <span class="error">{confirmPasswordValidation()}</span>
                 </div>
             </fieldset>
-            <fieldset>
-                <legend>Forms Data</legend>
-                <div>
-                    <p>First Name: {firstName}</p>
-                    <p>Last Name: {lastName}</p>
-                    <p>Email Address: {email}</p>
-                    <p>Password: {password}</p>
-                    <p>Confirm Password: {confirmPassword}</p>
-                </div>
-            </fieldset>
+            <Display firstName={firstName} lastName={lastName} email={email} password={password} confirmPassword={confirmPassword}/>
         </div>
     );
 };
