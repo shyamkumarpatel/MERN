@@ -4,11 +4,13 @@ const Box = (props) => {
     const boxStyle = {
         height: '50px',
         width: '50px',
-        color: props.color,
-        border: 'none'
+        backgroundColor: props.color,
+        border: 'none',
+        margin: '3px'
     };
+
   return (
-    <div style={boxStyle}></div>
+      <div style={boxStyle}></div>
   )
 }
 

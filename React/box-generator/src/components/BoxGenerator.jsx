@@ -1,15 +1,18 @@
 import React, {useState} from 'react';
-import Box from './Box';
 
 const BoxGenerator = (props) => {
+    //let colors = [];
     const [color, setColor] = useState("");
+
     const createUser = (e) => {
-        console.log("Color: ", color);
+        e.preventDefault();
+        props.color(color);
+        setColor("");
     };
     return (
         <div>
         <fieldset>
-            <legend>Enter Forms Data</legend>
+            <legend>Enter Color of Box:</legend>
             <form onSubmit={ createUser }>
                 <div>
                     <label>Color: </label> 
@@ -17,7 +20,6 @@ const BoxGenerator = (props) => {
                     <input type="submit" value="Add" />
                 </div>
             </form>
-            <Box color={color}/>
         </fieldset>
     </div>
     )
