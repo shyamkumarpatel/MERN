@@ -20,7 +20,7 @@ const Starships = () => {
                   console.log(err);
                   navigate('/ERROR');
               })
-  }, [id, navigate]);
+  }, [id]);
 
   return (
     <fieldset>
