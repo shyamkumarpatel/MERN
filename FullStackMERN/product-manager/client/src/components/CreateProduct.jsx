@@ -15,7 +15,7 @@ const CreateProduct = (props) => {
         e.preventDefault();
         axios.post(`http://localhost:8000/api/products/new`, {title, price, description})
         .then(res => 
-            {refreshListProp(res.data);
+            {refreshListProp();
                 setTitle("");
                 setPrice(0);
                 setDescription("");

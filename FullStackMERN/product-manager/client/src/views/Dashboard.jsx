@@ -18,12 +18,12 @@ const Dashboard = () => {
     const refreshList = ()=>{
         setRefresh(!refresh);
     }
-    
+
     return (
         <div>
             <CreateProduct refreshListProp={refreshList}/>
             <hr/>
-            <DisplayAllProducts products={products}/>
+            <DisplayAllProducts products={products} refreshListProp={refreshList}/>
         </div>
     )
 }
