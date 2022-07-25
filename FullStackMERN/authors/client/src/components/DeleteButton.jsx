@@ -5,7 +5,15 @@ import axios from 'axios';
 
 const DeleteButton = (props) => {
     const {author, refreshListProp} = props;    
+
     const handleDelete = () =>{
+        if(window.confirm(`Are you sure you want to remove ${author.name}`)){
+            executeDelete();
+        }
+        //executeDelete();
+    }
+
+    const executeDelete = () =>{
         //console.log("productid =", productid);
         ///api/products/delete/:id
         axios.delete(`http://localhost:8000/api/authors/delete/${author._id}`)
